@@ -1,0 +1,31 @@
+name: Rushy3
+version: 1.0
+authors: [Sanch, Mlamlu] 
+main: fr.rushy.rushy3.Main
+ 
+commands:
+   join:
+      description: Pour rejoindre une équipe
+      usage: /<command> <équipe>
+   vote:
+      description: Pour voter le commencement d'une partie
+      usage: /<command>
+   t:
+      description: Pour envoyer un message privé à ton équipe
+      usage: /<command> <message>
+   start:
+      description: Pour commencer une partie
+      usage: /<command>
+      permission: rushy3.start
+   spect:
+      description: Pour rejoindre les spectateurs
+      usage: /<command>
+   leave:
+      description: Pour revenir aux lobby
+      usage: /<command>
+permissions:
+   rushy3.*:
+      children:
+         rushy3.start: true
+   rushy3.start:
+     default: op
